@@ -1,0 +1,13 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+@import '../styles/globals.scss';
+
+body,
+#root {
+  height: 100vh;
+  margin: 0;
+  background-color: $body-bg-color;
+}

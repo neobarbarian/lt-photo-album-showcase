@@ -1,0 +1,85 @@
+/* PhotoAlbum.scss */
+
+@import '../../styles/variables.scss';
+
+.col {
+  padding: 0;
+}
+
+.photo-album {
+  .row {
+    --bs-gutter-x: 0;
+  }
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &__main {
+    height: $main-height;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+
+    .title {
+      width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 10pt;
+    }
+  }
+
+  &__card {
+    @extend %photo-card-base;
+    max-width: 150px;
+    max-height: 200px;
+  }
+
+  &__img {
+    --bs-card-spacer-y: 0;
+    --bs-card-spacer-x: 0;
+  }
+
+  &__card:hover {
+    @extend %photo-card-hover;
+  }
+
+  &__no-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__alert {
+    position: absolute;
+    bottom: 109px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__footer {
+    height: $footer-height;
+    background-color: $footer-bg-color;
+    padding: 10px 0 0;
+
+    .search-form-row {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .search-form-control {
+      width: 35%;
+      margin: 0.5rem 2rem;
+    }
+  }
+}
+
+.modal-img {
+  display: flex;
+  justify-content: center;
+}
