@@ -32,10 +32,25 @@ export default function PhotoAlbumInput(props: AlbumInputProps) {
     setSearchTerm,
   } = props;
 
+  const displayName = () => {
+    switch (name) {
+      case 'albumId':
+        return 'for Album ID';
+      case 'id':
+        return 'for Photo ID';
+      case 'title':
+        return 'for Title';
+      default:
+        return '';
+    }
+  };
+
   return (
     <Form.Control
       type="text"
       name={name}
+      aria-label={`Please enter a search value ${displayName()}`}
+      title={`Please enter a search value ${displayName()}`}
       onChange={($event) => {
         if (validateInputFields($event.target.name, $event.target.value)) {
           setSearchCategory(

@@ -62,6 +62,7 @@ export default function PhotoAlbum() {
                 className="photo-album__img"
                 variant="top"
                 src={photo.thumbnailUrl}
+                alt={`Thumbnail for ${photo.title}`}
               />
               <Card.Body className="title">
                 <span>{photo.title}</span>
