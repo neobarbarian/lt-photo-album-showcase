@@ -62,6 +62,7 @@ export default function PhotoAlbum() {
                 className="photo-album__img"
                 variant="top"
                 src={photo.thumbnailUrl}
+                alt={`Thumbnail for ${photo.title}`}
               />
               <Card.Body className="title">
                 <span>{photo.title}</span>
@@ -71,10 +72,7 @@ export default function PhotoAlbum() {
         ) : (
           <div className="photo-album__no-results">
             <h1>No Photos Available</h1>
-            <p>
-              Please enter or modify search terms in the form below to find
-              photos.
-            </p>
+            <p>photos.</p>
           </div>
         )}
       </Col>

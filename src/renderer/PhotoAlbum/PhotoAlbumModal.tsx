@@ -16,11 +16,11 @@ export default function PhotoAlbumModal(props: PhotoAlbumModalProps) {
         setImageInfo({} as Photo);
         setShowModal(false);
       }}
-      aria-labelledby="example-modal-sizes-title-lg"
+      aria-labelledby="photo-album-modal-display"
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="example-modal-sizes-title-lg">
+        <Modal.Title id="photo-album-modal-display">
           {imageInfo.title}
         </Modal.Title>
       </Modal.Header>
