@@ -72,7 +72,10 @@ export default function PhotoAlbum() {
         ) : (
           <div className="photo-album__no-results">
             <h1>No Photos Available</h1>
-            <p>photos.</p>
+            <p>
+              Please enter or modify search terms in the form below to find
+              photos.
+            </p>
           </div>
         )}
       </Col>
